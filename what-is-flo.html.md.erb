@@ -8,15 +8,13 @@ Flo is an HTML5 canvas application that runs on top of Spring XD runtime, offeri
 
 Flo allows you to create real-time streaming pipes either via the textual shell or the ‘drag and drop’ interface.
 
-The textual shell offers content-assist for stream definitions. Whether it is a source, processor, sink, or job, content assist offers completion of module names and module options. This allows for rapid development, and is similar to the content-assist experience when writing code in an IDE.
+The textual shell offers content-assist for stream definitions. Whether it is a source, processor, sink or job, content assist offers completion of module names and module options. This allows for rapid development, and is similar to the content-assist experience when writing code in an IDE.
 
-The textual view and the graphical view are kept in sync automatically. Whilst working on a stream definition you can switch repeatedly between using the drag-drop support and editing the text, they are both kept in step to represent the latest version of the stream definition.
+The textual and graphicals view are kept in sync automatically. While working on a stream definition you can switch them and still find and up-to-date represenation of your pipelines.
 
-Flo includes a palette with all out-of-the-box adapters available in Spring XD. The palette also includes a smart-filter for quick module lookup. Once you find the desired module, you can drag-drop to the canvas to create or amend an existing definition.
+Flo includes a palette with all out-of-the-box adapters available in Spring XD. The palette also includes a smart search filter for quick module lookup. Once you find the desired module, you can drag-drop to the canvas to create a new definition or amend an existing one.
 
-Streaming pipelines are made up of source, processor (0..n), and sink modules. Flo expects this structure and offers immediate feedback. The textual shell displays error messages for syntax errors and other problems with stream definitions, for example if a module is specified with an unsupported option.
-
-Watch [“How to use Flo”](linked to be attached) screencast for deeper insights, tips and tricks.
+Pipelines are composed of source, processor (0..n), and sink modules. Flo expects this structure and offers immediate feedback. The textual shell displays error messages for syntax errors and other problems with stream definitions, for example if a module is specified with an unsupported option.
 
 ### Health Monitoring ###
 
@@ -24,7 +22,7 @@ Spring XD uses Spring Boot’s monitoring and management support over HTTP and J
 
 The states of pipelines in Spring XD such as Deployed, Incomplete, Undeployed, and Failed are represented visually using different colors: green, orange, grey, and red respectively. 
 
-Small colored circles under each module represent the states of the of that module’s instances. The color of the circle indicates the state of the instance. White indicates the instance is waiting to be deployed, and green indicates successful deployment. Hovering over a circle will provide information specific to the corresponding instance, for example where it is running. If a large number of instances are requested, the view will switch from circles to a simple numeric summary of how many are successfully deployed versus how many have been requested.
+Small colored circles under each module represent the states of that module’s instances. White indicates that an instance is waiting to be deployed, and green indicates successful deployment. Hovering over a circle will provide information specific to the corresponding instance, for example where it is running. If a large number of instances are requested, the view will switch from circles to a simple numeric summary of how many are successfully deployed versus how many have been requested.
 
 ### Metrics ###
 
