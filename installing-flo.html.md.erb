@@ -1,0 +1,19 @@
+---
+title: Installing Flo
+---
+
+1. Install or update to Spring XD 1.2 GA.
+
+1. Visit the [Flo product page](“https://network.pivotal.io/products/p-spring-flo”) and download `flo-spring-xd-admin-ui-client-1.2.0.RELEASE.zip`.
+
+1. Go to XD_HOME/lib directory and unzip `flo-spring-xd-admin-ui-client-1.2.0.RELEASE.zip` to replace/overwrite the existing `spring-xd-admin-ui-client-1.2.0.RELEASE.jar`.
+
+1. Clear your browser cache.
+
+1. Access Flo for Spring XD at the following URI endpoints:
+	* Main dashboard: `http://HOST_NAME:PORT/admin-ui`
+	* Flo canvas: `http://HOST_NAME:PORT/admin-ui/#/streams/create`
+	* Health monitoring: `http://HOST_NAME:PORT/admin-ui/#/streams/definitions`
+	* Metrics are located at: `http://HOST_NAME:PORT/admin-ui/#/streams/definitions` 
+
+<p class='note'><strong>Note</strong>: You must enable JMX in your Spring XD cluster. By default it is disabled.</p>
