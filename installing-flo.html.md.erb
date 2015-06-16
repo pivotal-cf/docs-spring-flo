@@ -8,9 +8,9 @@ This topic provides instructions for installing Flo for Spring XD.
 
 1. Visit the [Flo product page](https://network.pivotal.io/products/p-spring-flo) and download `flo-spring-xd-admin-ui-client-1.2.0.RELEASE.zip`.
 
-1. Back up your original `spring-xd-admin-ui-client-1.2.0.RELEASE.jar` file.
- 
-1. Navigate to XD_HOME/lib directory and unzip `flo-spring-xd-admin-ui-client-1.2.0.RELEASE.zip` to replace the existing `spring-xd-admin-ui-client-1.2.0.RELEASE.jar`.
+1. Navigate to the `XD_HOME/lib` directory and back up your original `spring-xd-admin-ui-client-1.2.0.RELEASE.jar` file.
+
+1. While still in the `XD_HOME/lib` directory, unzip `flo-spring-xd-admin-ui-client-1.2.0.RELEASE.zip` to replace the existing `spring-xd-admin-ui-client-1.2.0.RELEASE.jar`.
 
 1. Clear your browser cache.
 
@@ -19,5 +19,7 @@ This topic provides instructions for installing Flo for Spring XD.
 	* Stream creation: `http://HOST_NAME:PORT/admin-ui/#/streams/create`
 	* Health monitoring: `http://HOST_NAME:PORT/admin-ui/#/streams/definitions`
 	* Module throughput rates are visible at `http://HOST_NAME:PORT/admin-ui/#/streams/definitions`.
+
+<p class='note'><strong>Note</strong>: If unchanged, the default PORT points to 9393.</p>
 
 <p class='note'><strong>Note</strong>: To see throughput rates for modules, you must enable JMX in your Spring XD cluster. By default it is disabled. Instructions for turning it on are <a href='http://docs.spring.io/spring-xd/docs/current/reference/html/#_monitoring_xd_admin_container_and_single_node_servers'>here</a></p>
