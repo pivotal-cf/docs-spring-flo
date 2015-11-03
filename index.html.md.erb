@@ -7,7 +7,7 @@ Flo is an HTML5 canvas application that runs on the Spring XD runtime, offering 
 
 ## <a id='drag-drop'></a>Drag and Drop Interface ##
 
-Flo allows you to create real-time streaming and batch pipelines either with the textual shell or the ‘drag and drop’ interface. For more information, see the [Building Streams](https://www.youtube.com/watch?v=IL3XnlOI9vQ&feature=youtu.be), [Advanced Stream Creation](https://www.youtube.com/watch?v=os3WgPa-Axk&feature=youtu.be), and Job Orchestration tutorial videos.
+Flo allows you to create real-time streaming and batch pipelines either with the textual shell or the ‘drag and drop’ interface. For more information, see the [Building Streams](https://www.youtube.com/watch?v=IL3XnlOI9vQ&feature=youtu.be), [Advanced Stream Creation](https://www.youtube.com/watch?v=os3WgPa-Axk&feature=youtu.be), and [Job Orchestration](https://spring.io/blog/2015/11/03/spring-xd-1-3-demo-flo-for-batch) tutorial videos.
 
 ## <a id='flo-and-pipelines'></a>Flo and Streaming Pipelines
 
@@ -19,7 +19,7 @@ Flo includes a palette with all out-of-the-box adapters available in Spring XD. 
 
 Pipelines are composed of source, processor (0..n), and sink modules. Flo expects this structure and offers immediate feedback on any issues it finds. The textual shell displays error messages for syntax errors and other problems with stream definitions, such as if a module is specified with an unsupported option.
 
-## <a id='health-monitoring'></a>Health Monitoring ##
+### <a id='health-monitoring'></a>Health Monitoring ##
 
 Spring XD uses Spring Boot’s monitoring and management support over HTTP and JMX along with Spring Integration’s MBean Exporters. Flo leverages these endpoints to provide visual health monitoring.
 
@@ -27,7 +27,7 @@ The states of pipelines in Spring XD are represented visually by different color
 
 Small colored circles under each module represent the states of that module’s instances. White indicates that an instance is waiting to be deployed, and green indicates successful deployment. Hovering over a circle provides information specific to the corresponding instance, such as where it is running. If you request a large number of instances in this way, the view switches from circles to a simple numeric summary of how many are successfully deployed versus how many have been requested.
 
-## <a id='metrics'></a>Metrics ##
+### <a id='metrics'></a>Metrics ##
 
 Flo overlays the stream view of each module with the combined message throughput for all instances of that module. Where applicable, the input rate is displayed to the left of the module and the output rate is displayed on the right.
 
