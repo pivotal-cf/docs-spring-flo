@@ -1,0 +1,41 @@
+---
+title: Guidelines for Building Composed Jobs
+---
+
+This topic provides instructions for building composed jobs. 
+
+* The basic building block is a flow, which is a sequence of one or more jobs.
+* Flows are self contained and there is effectively one entry point and all exits from a flow exit to the same next target.
+* You can link the end of one flow to the start of a new flow but you can’t link between intermediate nodes in two flows.
+* A split indicates a number of flows run in parallel.
+* A composed job can specify a timeout, this a global setting for the job. To set a global setting for a job open the properties for the START node and set it there. 
+* Although jobs in a flow are expressed such that one runs after another, a conditional transition can be setup to cause something different to happen when a particular job finishes. The conditional transition specifies the Job Exit Status which triggers it and then what happens next: this might be another job or it might be immediately ENDing or FAILing that flow.
+* The wildcard ‘*’ value for a conditional transition job exit status represents everything not mapped by other transitions from the same job.
+* For the last job in a flow, if the exit space is being mapped in any way (if there are any conditional transitions out of it) then it is important to map the entire exit space by ensuring you have a conditional transition for ‘*’ (meaning ‘any exit status’).
+* If your graph looks like spaghetti, consider decomposing it further. You can build a simple composed job then use that as a building block in another composed job.
+
+<%= image_tag("basic_composed.png") %>
+
+<%= image_tag("multiple_jobs.png") %>
+
+<%= image_tag("simple_split.png") %>
+
+<%= image_tag("conditional_transition.png") %>
+
+<%= image_tag("double_splits.png") %>
+
+<%= image_tag("multiple_exit_points.png") %>
+
+<%= image_tag("conditional_transition.png") %>
+
+<%= image_tag("parallel_flows_trans.png") %>
+
+<%= image_tag("multiple_transitions_target.png") %>
+
+<%= image_tag("parallel_flows_failed.png") %>
+
+<%= image_tag("mapping_exit_space.png") %>
+
+<%= image_tag("finishing_flow_early.png") %>
+
+<%= image_tag("failing_flow_early.png") %>
